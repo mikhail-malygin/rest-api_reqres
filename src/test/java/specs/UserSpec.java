@@ -23,4 +23,20 @@ public class UserSpec {
             .expectBody("data", notNullValue())
             .expectBody("support", notNullValue())
             .build();
+
+    public static RequestSpecification createUserRequestSpec = with()
+            .basePath("/users")
+            .log().uri()
+            .log().body()
+            .contentType(JSON);
+
+    public static ResponseSpecification createUserResponseSpec = new ResponseSpecBuilder()
+            .expectStatusCode(201)
+            .log(LogDetail.STATUS)
+            .log(LogDetail.BODY)
+            .expectBody("userName", notNullValue())
+            .expectBody("userJob", notNullValue())
+            .expectBody("id", notNullValue())
+            .expectBody("createdAt", notNullValue())
+            .build();
 }
