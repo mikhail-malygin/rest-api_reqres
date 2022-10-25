@@ -39,4 +39,39 @@ public class UserSpec {
             .expectBody("id", notNullValue())
             .expectBody("createdAt", notNullValue())
             .build();
+
+    public static RequestSpecification updateUserRequestSpec = with()
+            .basePath("/users")
+            .log().uri()
+            .log().body()
+            .contentType(JSON);
+
+    public static ResponseSpecification updateUserResponseSpec = new ResponseSpecBuilder()
+            .expectStatusCode(200)
+            .log(LogDetail.STATUS)
+            .log(LogDetail.BODY)
+            .expectBody("userName", notNullValue())
+            .expectBody("userJob", notNullValue())
+            .expectBody("updatedAt", notNullValue())
+            .build();
+
+    public static RequestSpecification registerUserRequestSpec = with()
+            .basePath("register")
+            .log().uri()
+            .contentType(JSON);
+
+    public static ResponseSpecification registerKnownUserResponseSpec = new ResponseSpecBuilder()
+            .expectStatusCode(200)
+            .log(LogDetail.STATUS)
+            .log(LogDetail.BODY)
+            .expectBody("id", notNullValue())
+            .expectBody("token", notNullValue())
+            .build();
+
+    public static ResponseSpecification registerUnknownUserResponseSpec = new ResponseSpecBuilder()
+            .expectStatusCode(400)
+            .log(LogDetail.STATUS)
+            .log(LogDetail.BODY)
+            .expectBody("error", notNullValue())
+            .build();
 }

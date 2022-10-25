@@ -57,5 +57,69 @@ public class ReqresTests extends TestBase{
         assertThat(responseUserLombokModel.getUserJob()).isEqualTo("QA engineer");
     }
 
+    @Test
+    @Tag("regres_api")
+    @Owner("malyginms")
+    @DisplayName("Updating user data test")
+    public void updateUserTests() {
 
+        BodyUserLombokModel bodyUserLombokModel = new BodyUserLombokModel();
+        bodyUserLombokModel.setUserName("George");
+        bodyUserLombokModel.setUserJob("Automation Java QA engineer");
+
+        ResponseUserLombokModel responseUserLombokModel = given()
+                .spec(updateUserRequestSpec)
+                .body(bodyUserLombokModel)
+                .when()
+                .put("/153")
+                .then()
+                .spec(updateUserResponseSpec)
+                .extract()
+                .as(ResponseUserLombokModel.class);
+
+        assertThat(responseUserLombokModel.getUserName()).isEqualTo("George");
+        assertThat(responseUserLombokModel.getUserJob()).isEqualTo("Automation Java QA engineer");
+
+    }
+
+    @Test
+    @Tag("regres_api")
+    @Owner("malyginms")
+    @DisplayName("Registration a known user test")
+    public void registerKnownUserTests() {
+
+        BodyUserLombokModel bodyUserLombokModel = new BodyUserLombokModel();
+        bodyUserLombokModel.setEmail("eve.holt@reqres.in");
+        bodyUserLombokModel.setPassword("pistol");
+
+        given()
+                .spec(registerUserRequestSpec)
+                .body(bodyUserLombokModel)
+                .when()
+                .post()
+                .then()
+                .spec(registerKnownUserResponseSpec)
+                .body("id", is(4))
+                .body("token", is("QpwL5tke4Pnpja7X4"));
+    }
+
+    @Test
+    @Tag("regres_api")
+    @Owner("malyginms")
+    @DisplayName("Registration of an unknown user test")
+    public void registerUnknownUserTests() {
+
+        BodyUserLombokModel bodyUserLombokModel = new BodyUserLombokModel();
+        bodyUserLombokModel.setEmail("testGulio@reqres.in");
+        bodyUserLombokModel.setPassword("regres123");
+
+        given()
+                .spec(registerUserRequestSpec)
+                .body(bodyUserLombokModel)
+                .when()
+                .post()
+                .then()
+                .spec(registerUnknownUserResponseSpec)
+                .body("error", is("Note: Only defined users succeed registration"));
+    }
 }
