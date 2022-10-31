@@ -11,6 +11,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
+import static com.codeborne.selenide.Selenide.open;
 import static java.lang.String.format;
 
 public class TestBase {
@@ -30,6 +31,7 @@ public class TestBase {
         Configuration.baseUrl = "https://reqres.in/api/";
         Configuration.remote = format("https://%s:%s@%s", login, password, System.getProperty("selenoidStand"));
         Configuration.browserCapabilities = capabilities;
+        open(Configuration.baseUrl);
     }
 
     @AfterEach
