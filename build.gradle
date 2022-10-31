@@ -8,13 +8,12 @@ repositories {
     mavenCentral()
 }
 
-def allureVersion = "2.18.1",
-    selenideVersion = "6.6.6",
-    restAssuredVersion = "5.1.1",
-    junitVersion = "5.8.2",
-    slf4jVersion = "1.7.32",
+def allureVersion = '2.19.0',
+    selenideVersion = "6.9.0",
+    restAssuredVersion = '5.2.0',
+    junitVersion = '5.9.0',
+    slf4jVersion = '2.0.3',
     ownerVersion = "1.0.12",
-    fakerVersion = "1.0.2",
     assertjVersion = "3.23.1"
 
 allure {
@@ -40,10 +39,9 @@ dependencies {
             "io.qameta.allure:allure-selenide:$allureVersion",
             "io.qameta.allure:allure-rest-assured:$allureVersion",
             "org.aeonbits.owner:owner:$ownerVersion",
-            "com.github.javafaker:javafaker:$fakerVersion",
             "org.assertj:assertj-core:$assertjVersion"
     )
-    testRuntimeOnly('org.junit.jupiter:junit-jupiter-engine:5.8.1')
+    testRuntimeOnly('org.junit.jupiter:junit-jupiter-engine:5.9.0')
 }
 
 tasks.withType(JavaCompile) {
@@ -51,6 +49,7 @@ tasks.withType(JavaCompile) {
 }
 
 tasks.withType(Test) {
+    systemProperties(System.getProperties())
     useJUnitPlatform()
 
     testLogging {
@@ -58,6 +57,12 @@ tasks.withType(Test) {
             events "started", "skipped", "failed", "standard_error", "standard_out"
             exceptionFormat "short"
         }
+    }
+}
+
+task regres_tests(type: Test) {
+    useJUnitPlatform{
+        includeTags "regres_api"
     }
 }
 

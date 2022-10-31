@@ -5,6 +5,7 @@ import io.restassured.filter.log.LogDetail;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 
+import static helpers.CustomApiListener.withCustomTemplates;
 import static io.restassured.RestAssured.with;
 import static io.restassured.http.ContentType.JSON;
 import static org.hamcrest.Matchers.notNullValue;
@@ -13,6 +14,7 @@ public class UserSpec {
 
     public static RequestSpecification getUsersRequestSpec = with()
             .basePath("/users")
+            .filter(withCustomTemplates())
             .log().uri()
             .contentType(JSON);
 
@@ -26,6 +28,7 @@ public class UserSpec {
 
     public static RequestSpecification createUserRequestSpec = with()
             .basePath("/users")
+            .filter(withCustomTemplates())
             .log().uri()
             .log().body()
             .contentType(JSON);
@@ -42,6 +45,7 @@ public class UserSpec {
 
     public static RequestSpecification updateUserRequestSpec = with()
             .basePath("/users")
+            .filter(withCustomTemplates())
             .log().uri()
             .log().body()
             .contentType(JSON);
@@ -57,6 +61,7 @@ public class UserSpec {
 
     public static RequestSpecification registerUserRequestSpec = with()
             .basePath("register")
+            .filter(withCustomTemplates())
             .log().uri()
             .contentType(JSON);
 
