@@ -60,9 +60,9 @@ tasks.withType(Test) {
     }
 }
 
-task regres_tests(type: Test) {
+task reqres_tests(type: Test) {
     useJUnitPlatform{
-        includeTags "regres_api"
+        includeTags "reqres_api"
     }
 }
 

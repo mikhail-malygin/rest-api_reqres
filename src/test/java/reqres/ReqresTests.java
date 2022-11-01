@@ -17,7 +17,7 @@ import static specs.UserSpec.*;
 public class ReqresTests extends TestBase{
 
     @Test
-    @Tag("regres_api")
+    @Tag("reqres_api")
     @Owner("malyginms")
     @DisplayName("Getting user list test")
     public void getListUsersTests() {
@@ -34,7 +34,7 @@ public class ReqresTests extends TestBase{
     }
 
     @Test
-    @Tag("regres_api")
+    @Tag("reqres_api")
     @Owner("malyginms")
     @DisplayName("Creation a new user test")
     public void createUserTests() {
@@ -58,7 +58,7 @@ public class ReqresTests extends TestBase{
     }
 
     @Test
-    @Tag("regres_api")
+    @Tag("reqres_api")
     @Owner("malyginms")
     @DisplayName("Updating user data test")
     public void updateUserTests() {
@@ -83,7 +83,7 @@ public class ReqresTests extends TestBase{
     }
 
     @Test
-    @Tag("regres_api")
+    @Tag("reqres_api")
     @Owner("malyginms")
     @DisplayName("Registration a known user test")
     public void registerKnownUserTests() {
@@ -104,7 +104,7 @@ public class ReqresTests extends TestBase{
     }
 
     @Test
-    @Tag("regres_api")
+    @Tag("reqres_api")
     @Owner("malyginms")
     @DisplayName("Registration of an unknown user test")
     public void registerUnknownUserTests() {
