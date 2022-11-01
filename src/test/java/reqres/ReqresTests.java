@@ -1,5 +1,6 @@
 package reqres;
 
+import io.qameta.allure.Description;
 import io.qameta.allure.Owner;
 import models.lombok.BodyUserLombokModel;
 import models.lombok.ResponseUserLombokModel;
@@ -37,6 +38,11 @@ public class ReqresTests extends TestBase{
     @Tag("reqres_api")
     @Owner("malyginms")
     @DisplayName("Creation a new user test")
+    @Description("Creation a new user.\n Using request POST: https://reqres.in/api/users\n" +
+            "and BODY {\n" +
+            "    \"userName\": \"George\",\n" +
+            "    \"userJob\": \"QA engineer\"\n" +
+            "}")
     public void createUserTests() {
 
         BodyUserLombokModel bodyUserLombokModel = new BodyUserLombokModel();
