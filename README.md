@@ -10,6 +10,8 @@
 - [Running tests using terminal](#desktop_computer-running-tests-using-terminal)
 - [Allure reports](#-allure-reports)
 - [Allure TestOps integration](#-allure-TestOps-integration)
+- [Jira integration](#-jira-integration)
+- [Notification in telegram](#-notification-in-telegram)
 
 ## :computer: Technology stack
 <p align="center">
@@ -93,3 +95,12 @@ You can find detailed description of tests and attachments(screenshots, request,
 <p align="center">
 <img title="Allure TestOps Test Cases Dashboard" src="images/picture/allure_testops_testcases.jpg">
 </p>
+
+## <img width="4%" title="Jira" src="images/logo/jira.svg"> Jira integration
+> <a target="_blank" href="https://jira.autotests.cloud/browse/AUTO-1416">Link to Jira task</a>
+
+![This is an image](images/picture/jira_task.jpg)
+
+## <img width="4%" title="Telegram" src="images/logo/telegram.svg"> Notification in telegram
+
+![This is an image](images/picture/telegram_notifications.jpg)
