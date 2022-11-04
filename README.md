@@ -1,5 +1,5 @@
 # rest-api_reqresIn
-> <a target="_blank" href="https://miro.com/">Link to reqresIn api web page</a>
+> <a target="_blank" href="https://reqres.in/">Link to reqresIn api web page</a>
 
 ![This is an image](images/picture/reqresIn.jpg)
 
