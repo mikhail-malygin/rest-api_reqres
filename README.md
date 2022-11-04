@@ -6,6 +6,8 @@
 ## :page_with_curl: Table of contents:
 - [Technology stack](#computer-technology-stack)
 - [Test cases](#bookmark_tabs-test-cases)
+- [Deployment in Jenkins](#-deployment-in-Jenkins)
+- [Running tests using terminal](#desktop_computer-running-tests-using-terminal)
 
 ## :computer: Technology stack
 <p align="center">
@@ -30,3 +32,21 @@
 - :heavy_check_mark: Updating user data test
 - :heavy_check_mark: Registration a known user test
 - :heavy_check_mark: Registration an unknown user test
+
+## <img width="4%" title="Jenkins" src="images/logo/jenkins.svg"> Deployment in Jenkins
+> <a target="_blank" href="https://jenkins.autotests.cloud/job/13-malyginms-unit24_rest-api_diplom/">Build in Jenkins</a>
+
+![This is an image](images/pictures/build_jenkins.jpg)
+
+## :desktop_computer: Running tests using terminal
+
+#### Command for local run:
+```bash
+gradle clean test
+```
+
+#### Command for remote run:
+```bash
+clean reqres_tests
+-DselenoidStand=${SELENOID_STAND}
+```
