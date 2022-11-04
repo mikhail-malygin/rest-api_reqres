@@ -8,6 +8,7 @@
 - [Test cases](#bookmark_tabs-test-cases)
 - [Deployment in Jenkins](#-deployment-in-Jenkins)
 - [Running tests using terminal](#desktop_computer-running-tests-using-terminal)
+- [Allure reports](#-allure-reports)
 
 ## :computer: Technology stack
 <p align="center">
@@ -50,3 +51,27 @@ gradle clean test
 clean reqres_tests
 -DselenoidStand=${SELENOID_STAND}
 ```
+
+## <img width="4%" title="Allure" src="images/logo/allureReport.svg"> Allure reports
+> <a target="_blank" href="https://jenkins.autotests.cloud/job/13-malyginms-unit24_rest-api_diplom/allure/">Link to Allure reports</a>
+
+![This is an image](images/picture/allure_reports_jenkins.jpg)
+
+#### Overview dashboard
+
+<p align="center">
+<img title="Allure Overview Dashboard" src="images/picture/allure_reports_overview.jpg">
+</p>
+
+#### Suites dashboard
+You can find detailed description of tests and attachments(screenshots, request, response) which will be useful for debugging, test documentations, etc
+
+<p align="center">
+<img title="Allure Suites Dashboard" src="images/picture/allure_reports_suits.jpg">
+</p>
+
+#### Graphs dashboard
+
+<p align="center">
+<img title="Allure Suites Dashboard" src="images/picture/allure_reports_graphs.jpg">
+</p>
