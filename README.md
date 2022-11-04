@@ -5,6 +5,7 @@
 
 ## :page_with_curl: Table of contents:
 - [Technology stack](#computer-technology-stack)
+- [Test cases](#bookmark_tabs-test-cases)
 
 ## :computer: Technology stack
 <p align="center">
@@ -22,3 +23,10 @@
 <a href="https://www.atlassian.com/software/jira"><img src="images/logo/jira.svg" width="50" height="50"  alt="Jira"/></a>
 <a href="https://telegram.org/"><img src="images/logo/telegram.svg" width="50" height="50"  alt="Telegram"/></a>
 </p>
+
+## :bookmark_tabs: Test cases
+- :heavy_check_mark: Getting a user list test
+- :heavy_check_mark: Creation a new user test
+- :heavy_check_mark: Updating user data test
+- :heavy_check_mark: Registration a known user test
+- :heavy_check_mark: Registration an unknown user test
