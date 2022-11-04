@@ -1,7 +1,7 @@
 # rest-api_reqresIn
 > <a target="_blank" href="https://miro.com/">Link to reqresIn api web page</a>
 
-![This is an image](images/pictures/reqresIn.jpg)
+![This is an image](images/picture/reqresIn.jpg)
 
 ## :page_with_curl: Table of contents:
 - [Technology stack](#computer-technology-stack)
@@ -9,6 +9,7 @@
 - [Deployment in Jenkins](#-deployment-in-Jenkins)
 - [Running tests using terminal](#desktop_computer-running-tests-using-terminal)
 - [Allure reports](#-allure-reports)
+- [Allure TestOps integration](#-allure-TestOps-integration)
 
 ## :computer: Technology stack
 <p align="center">
@@ -37,7 +38,7 @@
 ## <img width="4%" title="Jenkins" src="images/logo/jenkins.svg"> Deployment in Jenkins
 > <a target="_blank" href="https://jenkins.autotests.cloud/job/13-malyginms-unit24_rest-api_diplom/">Build in Jenkins</a>
 
-![This is an image](images/pictures/build_jenkins.jpg)
+![This is an image](images/picture/build_jenkins.jpg)
 
 ## :desktop_computer: Running tests using terminal
 
@@ -74,4 +75,21 @@ You can find detailed description of tests and attachments(screenshots, request,
 
 <p align="center">
 <img title="Allure Suites Dashboard" src="images/picture/allure_reports_graphs.jpg">
+</p>
+
+## <img width="4%" title="AllureTestOps" src="images/logo/allureTestOps.svg"> Allure TestOps integration
+> <a target="_blank" href="https://allure.autotests.cloud/launch/16392">Link to Allure TestOps</a>
+
+![This is an image](images/picture/allure_testops_jenkins.jpg)
+
+#### Launches dashboard
+
+<p align="center">
+<img title="Allure TestOps Launches Dashboard" src="images/picture/allure_testops_launches.jpg">
+</p>
+
+#### Test cases dashboard
+
+<p align="center">
+<img title="Allure TestOps Test Cases Dashboard" src="images/picture/allure_testops_testcases.jpg">
 </p>
